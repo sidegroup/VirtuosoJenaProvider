@@ -6,14 +6,15 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.RDFNode;
 
-import virtuoso.jena.driver.*;
+import virtuoso.jena.driver.VirtGraph;
+import virtuoso.jena.driver.VirtuosoQueryExecution;
+import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
+
 
 public class LoadDataSPARQL {
 
 	public static void main(String[] args) {
 		VirtGraph graph = new VirtGraph("load:test", "jdbc:virtuoso://192.168.99.100:32769", "dba", "dba");
-		
-		graph.clear();
 		
 		System.out.print ("Begin read from 'http://www.w3.org/People/Berners-Lee/card#i'  ");
 		graph.read("http://www.w3.org/People/Berners-Lee/card#i", "RDF/XML");
