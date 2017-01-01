@@ -1,0 +1,8 @@
+@prefix ns1: <http://dbpedia.org/property/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/resource/Zé_Ramalho>
+  rdfs:label "Zé Ramalho"@fr, "Zé Ramalho"@en, "Zé Ramalho"@es, "Zé Ramalho"@it, "Zé Ramalho"@pt, "Zé Ramalho"@de ;
+  ns1:dateOfBirth "1949-10-03"^^xsd:date ;
+  ns1:shortDescription "Brazilian singer-songwriter"@en ;

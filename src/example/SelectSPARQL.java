@@ -14,7 +14,17 @@ import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
 public class SelectSPARQL {
 
 	public static void main(String[] args) {
-		VirtGraph set = new VirtGraph ("jdbc:virtuoso://192.168.99.100:32769", "dba", "dba");
+//		String port = "1111"; // 1111 32769 31007
+//		String port = "31007";
+		String port = "32771";
+//		String address = "200.129.79.59"; // 192.168.99.100 10.0.24.146 200.129.79.59 localhost
+//		String address = "10.0.24.146";
+		String address = "192.168.99.100";
+//		String address = "127.0.0.1"; // TODO
+		String username = "dba";
+		String password = "dba";
+		VirtGraph set = new VirtGraph("jdbc:virtuoso://"+address+":"+port, username, password);
+		
 		org.apache.jena.query.Query sparql = QueryFactory.create("SELECT * WHERE { GRAPH ?graph { ?s ?p ?o } } limit 100");
 		VirtuosoQueryExecution vqe = VirtuosoQueryExecutionFactory.create(sparql, set);
 

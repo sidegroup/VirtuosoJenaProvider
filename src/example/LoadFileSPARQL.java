@@ -11,7 +11,7 @@ import virtuoso.jena.driver.VirtuosoQueryExecution;
 import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
 
 
-public class LoadDataSPARQL {
+public class LoadFileSPARQL {
 
 	public static void main(String[] args) {
 		VirtGraph graph = new VirtGraph("load:test", "jdbc:virtuoso://192.168.99.100:32769", "dba", "dba");
